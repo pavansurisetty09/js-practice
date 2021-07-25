@@ -9,7 +9,7 @@
 // a = b;
 // b = c;
 
-// console.log(a, b);
+// console.log(a, b);ś
 
 // function check(n) {
 //   if (n % 2 == 0) {
@@ -54,7 +54,7 @@
 // heightCheck(4);
 // heightCheck(8);
 
-// var years = [1997, 2021, 2000, 2003];
+// var years = [2003, 1997, 2021, 2000];
 
 // var largest = years[0];
 // var secondLargest = years[0];
@@ -69,6 +69,23 @@
 
 // console.log(largest);
 // console.log(secondLargest);
+
+// function checkBiggest(years) {
+//   var biggest = years[0];
+//   var secondBiggest = years[0];
+
+//   for (var i = 0; i < years.length; i++) {
+//     if (years[i] >= biggest) {
+//       biggest = years[i];
+//     } else if (years[i] > secondBiggest) {
+//       secondBiggest = years[i];
+//     }
+//   }
+
+//   console.log(biggest);
+//   console.log(secondBiggest);
+// }
+// checkBiggest([2003, 2005, 2006, 2021]);
 
 // var numbers = [10, 20, 20, 30, 40];
 
@@ -137,7 +154,7 @@
 //   console.log(result);
 // }
 
-// factorial(4);
+// factorial(5);
 
 // function factorial(n) {
 //   var result = 1;
@@ -153,7 +170,7 @@
 
 // sentWords = sentense.split(" ");
 
-// // var finalString = "";
+// var finalString = "";
 // console.log(sentWords);
 
 // for (var i = 0; i < sentWords.length; i++) {
@@ -167,11 +184,11 @@
 
 // var sentense = "";
 
-// for (var i = 0; i < word.length; i++) {
-//   sentense = sentense + " " + word[i];
-// }
+// // for (var i = 0; i < word.length; i++) {
+// //   sentense = sentense + " " + word[i];
+// // }
 
-// console.log(sentense);
+// // console.log(sentense);
 
 // var sentense = word.join(" ");
 
@@ -608,6 +625,11 @@
 // string[0] = "M";
 
 // console.log(string);
+// let string = "Hello World";
+// string = "I'm a String";
+// // string[0] = "M";
+
+// console.log(string);
 
 // var nums = [23, 21, 25];
 // function addNum(nums) {
@@ -619,7 +641,14 @@
 // }
 
 // addNum(nums);
-
+// function revStr(str) {
+//   var strArr = "";
+//   for (i = 0; i <= str.length - 1; i++) {
+//     strArr = str[i] + strArr;
+//   }
+//   console.log(strArr);
+// }
+// revStr("pavan");
 // const addNum = (nums) => {
 //   var nums = [23, 21, 25];
 
@@ -1451,7 +1480,7 @@
 //     console.log("false");
 //   }
 // }
-// // checkPalindrome("pavan");
+// checkPalindrome("pavan");
 // checkPalindrome("racecar");
 
 // const checkPalindrome = (str) => {
@@ -1736,3 +1765,259 @@
 // }
 // chunkArr([1, 2, 3, 4, 5, 6, [7]], 2);
 // console.log(chunkedArr);
+
+// function checkLongestWord(sen) {
+//   var wordArr = sen.match(/[A-Za-z0-9]+/g);
+//   console.log(wordArr);
+//   var sorted = wordArr.sort((a, b) => b.length - a.length);
+
+//   var longestWord = sorted.filter((word) => word.length === sorted[0].length);
+
+//   console.log(longestWord);
+// }
+// checkLongestWord("Hey Darling, abcdefg How are you");
+
+// var details = [
+//   { name: "Rishi", age: 18, gender: "male" },
+//   { name: "Vijay", age: 16, gender: "male" },
+//   { name: "Mounika", age: 23, gender: "female" },
+//   { name: "kumari", age: 23, gender: "female" },
+//   { name: "Paramesh", age: 14, gender: "male" },
+// ];
+
+// var profNames = details.map((user) => {
+//   //   console.log(user);
+//   if (user.gender == "male") {
+//     return { ...user, name: "Mr. " + user.name, age: user.age + 1 };
+//   } else if (user.gender == "female") {
+//     return { ...user, name: "Ms. " + user.name };
+//   }
+// });
+// // console.log(profNames);
+
+// var addCat = profNames.map((detail) => {
+//   if (detail.age >= 18) {
+//     return { ...detail, category: "Major" };
+//   } else {
+//     return { ...detail, category: "Minor" };
+//   }
+// });
+// // console.log(addCat);
+// var addRank = addCat.map((person) => {
+//   return person.age;
+// });
+
+// var sorted = addRank.sort((a, b) => b - a);
+// var output = addCat.map((rank) => {
+//   if (rank.age >= sorted[0]) {
+//     return { ...rank, ranked: "Leader" };
+//   } else {
+//     return rank;
+//   }
+// });
+
+// console.log(output);
+
+// console.log(details);
+
+// var movies = [
+//   {
+//     name: "Bahubali",
+//     year: 2016,
+//     hero: "prabhas",
+//   },
+//   {
+//     name: "Shivam",
+//     year: 2018,
+//     hero: "ram",
+//   },
+// ];
+
+// var output = movies.map((movie) => {
+//   if (movie.name === "Shivam") {
+//     return { ...movie, heroin: "Rashikanna" };
+//   } else {
+//     return movie;
+//   }
+// });
+
+// console.log(output);
+
+// var movie = {
+//   name: "Shivam",
+//   year: 2018,
+//   hero: "ram",
+// };
+// var add = "";
+// console.log(movie["year"].toString().split(""));
+
+// function checkNum(n) {
+//   !(n % 2) ? console.log("even") : console.log("odd");
+// }
+// checkNum(12);
+
+// const nums = [20, 10, 50, 30, 10, 40, 50, 10, 20, 90];
+// var repeatedNums = [];
+// var counts = {};
+// function checkRepeated(nums) {
+//   for (let i = 0; i < nums.length; i++) {
+//     if (counts[nums[i]]) {
+//       counts[nums[i]] += 1;
+//     } else {
+//       counts[nums[i]] = 1;
+//     }
+//   }
+// }
+// checkRepeated(nums);
+// console.log(counts);
+
+// var details = [
+//   { name: "Rishi", age: 18, gender: "male" },
+//   { name: "Vijay", age: 16, gender: "male" },
+//   { name: "Mounika", age: 23, gender: "female" },
+//   { name: "kumari", age: 25, gender: "female" },
+//   { name: "Paramesh", age: 14, gender: "male" },
+// ];
+
+// var newDetails = [];
+
+// var profNames = details.map((user) => {
+//   return user.gender == "male"
+//     ? { ...user, name: "Mr. " + user.name }
+//     : { ...user, name: "Ms. " + user.name };
+// });
+
+// var catUpdate = profNames.map((cat) => {
+//   return cat.age >= 18
+//     ? { ...cat, category: "Major" }
+//     : { ...cat, category: "Minor" };
+// });
+
+// var agesArr = catUpdate.map((userAge) => {
+//   return userAge.age;
+// });
+// var sortedAges = agesArr.sort((a, b) => b - a);
+
+// var rankedUser = catUpdate.map((rank) => {
+//   if (rank.age === sortedAges[0]) {
+//     return { ...rank, ranked: "Leader" };
+//   } else {
+//     return { ...rank };
+//   }
+// });
+
+// newDetails = { ...rankedUser };
+
+// console.log(newDetails);
+
+// var nums = [1, 2, 3, 4, 5];
+
+// var add = nums.reduce((acu, num) => {
+//   return acu + num;
+// });
+// console.log(add);
+
+// var sorted = nums.sort((a, b) => {
+//   return b - a;
+// });
+// console.log(sorted);
+
+// var revArr = nums.reverse();
+// console.log(revArr);
+
+// nums.unshift(0);
+// nums.pop();
+// nums.shift();
+// var removed = nums.filter((num) => {
+//   return num !== 4;
+// });
+// console.log(removed);
+
+// var names = ["rishi", "pavan", "vijay", "paramesh", "praveen", "mounika"];
+
+// var revStr = names.reverse();
+// console.log(revStr);
+
+// var value = "vijay";
+// var remStr = revStr.filter((name) => {
+//   return name !== value;
+// });
+// console.log(remStr);
+
+// names.forEach((name) => {
+//   return console.log(name);
+// });
+
+// for (let i = 0; i < names.length; i++) {
+//   console.log(names[i]);
+// }
+// var reverse = [];
+// for (let i = names.length - 1; i >= 0; i--) {
+//   reverse = names[i];
+//   console.log(reverse);
+// }
+
+// var str = "pavan";
+// var arrStr = str.split("").reverse().join("");
+// console.log(arrStr);
+
+// var name = "rishi";
+// name[0] = "R";
+
+// console.log(name);
+
+// for (let i = 0; i <= 1; i++) {
+//   console.log(i);
+// }
+
+// var output = "";
+// function revStr(str) {
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     output += str[i];
+//   }
+//   console.log(output);
+// }
+// revStr("pavan");
+
+// function revStr(str) {
+//   var output = str.toString().split("").reverse().join("");
+
+//   console.log(parseInt(output));
+// }
+// revStr(12345);
+
+// function palindrome(str) {
+//   var splitted = str.split("").reverse().join("");
+//   if (str == splitted) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(palindrome("racecar"));
+// console.log(palindrome("pavan"));
+// console.log(palindrome("pop"));
+
+// function printTable(n, m) {
+//   for (let i = 1; i <= m; i++) {
+//     var table = `${n} x ${i} = ${n * i}`;
+//     console.log(table);
+//   }
+// }
+// printTable(4, 12);
+
+var years = [2003, 2021, 2006, 2005, 1997];
+
+var largest = years[0];
+var secondLargest = years[0];
+
+for (let i = 0; i <= years.length; i++) {
+  if (years[i] > largest) {
+    largest = years[i];
+  } else if (years[i] > secondLargest && years[i] < largest) {
+    secondLargest = years[i];
+  }
+}
+
+console.log(largest);
+console.log(secondLargest);
