@@ -355,7 +355,7 @@
 
 // names = [];
 
-// // console.log(names);
+// console.log(names);
 
 // for (i = 0; i < personsAge.length; i++) {
 //   names[i] = "Mr." + personsAge[i].name;
@@ -1066,8 +1066,8 @@
 
 // var names = [];
 
-// UPDATE
-// names[1] = "Kumar";
+// // UPDATE;
+// names[0] = "Kumar";
 
 // console.log(names);
 
@@ -1746,9 +1746,9 @@
 
 // var c;
 
-// c = a;   c = 20;
-// a = b;   a = 30;
-// b = c;   b = 20;
+// c = a;
+// a = b;
+// b = c;
 
 // console.log(a, b);
 
@@ -1767,15 +1767,17 @@
 // console.log(chunkedArr);
 
 // function checkLongestWord(sen) {
-//   var wordArr = sen.match(/[A-Za-z0-9]+/g);
+//   // var wordArr = sen.match(/[A-Za-z0-9]+/g);
+//   var wordArr = sen.split(" ");
 //   console.log(wordArr);
 //   var sorted = wordArr.sort((a, b) => b.length - a.length);
+//   console.log(sorted);
 
 //   var longestWord = sorted.filter((word) => word.length === sorted[0].length);
 
 //   console.log(longestWord);
 // }
-// checkLongestWord("Hey Darling, abcdefg How are you");
+// checkLongestWord("Hey Darling How are you");
 
 // var details = [
 //   { name: "Rishi", age: 18, gender: "male" },
@@ -2006,18 +2008,58 @@
 // }
 // printTable(4, 12);
 
-var years = [2003, 2021, 2006, 2005, 1997];
+// var years = [2003, 2021, 2006, 2005, 1997];
 
-var largest = years[0];
-var secondLargest = years[0];
+// var largest = years[0];
+// var secondLargest = years[0];
 
-for (let i = 0; i <= years.length; i++) {
-  if (years[i] > largest) {
-    largest = years[i];
-  } else if (years[i] > secondLargest && years[i] < largest) {
-    secondLargest = years[i];
-  }
-}
+// for (let i = 0; i <= years.length; i++) {
+//   if (years[i] > largest) {
+//     largest = years[i];
+//   } else if (years[i] > secondLargest && years[i] < largest) {
+//     secondLargest = years[i];
+//   }
+// }
 
-console.log(largest);
-console.log(secondLargest);
+// console.log(largest);
+// console.log(secondLargest);
+
+// var name = "pavan";
+// var g = name.toUpperCase();
+// var spl = name.split("").join("");
+// var output = g[0] + spl.slice(1);
+// console.log(output);
+
+// var names = ["pavan", "rishi", "vijay", "Paramesh"];
+
+// var name = "pavan";
+// var modified = names.map(
+//   (name) => name.charAt(0).toUpperCase() + name.slice(1)
+// );
+// console.log(modified);
+
+// var person = {
+//     name: "Rishi",
+//     age: 24,
+//     gender: "male",
+//     friends: ["vijay", "paramesh", "mounika", "praveen"],
+//   };
+
+//   var mod = (person.friends[0] = "nikhil");
+//   console.log(person);
+
+// var name = "pavan";
+
+// console.log(Array.from(name));
+
+// var name = "Rishi";
+// var age = 24;
+// console.log(name + age);
+
+// for (let i = 1; i <= 10; i++) {
+//   const name = "Rishi";
+//   console.log(i + "  " + name);
+// }
+
+// console.log(name);
+

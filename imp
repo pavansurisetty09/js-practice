@@ -1,0 +1,4 @@
+// object[iteratble value to get all objec values ]
+
+// Array.from("pavan")
+// it will create entire word into an array of characters
